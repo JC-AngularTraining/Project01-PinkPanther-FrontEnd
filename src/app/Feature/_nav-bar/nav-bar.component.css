@@ -3,14 +3,16 @@ a {
 }
 
 #navBar-Main {
-  background-color: #FA8AB0;
-  border: 3px solid #B61588;
+  background-color: #fa8ab0;
+  border: 3px solid #b61588;
   display: flex;
   justify-content: space-between;
 }
 
 #navBar-Left {
-  font-family: 'cooper black';
+  font-family: "cooper black";
+  color: white;
+  text-decoration: none;
   font-size: 2em;
 }
 
@@ -21,9 +23,8 @@ a {
 }
 
 #navBar-Right a:hover {
-  color: #D372B7;
-
+  color: #d372b7;
 }
 #navBar-Right a.active {
-  color: #B61588;
+  color: #b61588;
 }

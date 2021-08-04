@@ -1,16 +1,17 @@
-  <!-- <h1 class="title"></h1>
+<!-- <h1 class="title"></h1>
    -->
 
-    <mat-toolbar id="navBar-Main">
-      <span id="navBar-Left">{{ title }}</span>
-      <nav id="navBar-Right">
-        <a routerLink="/home" routerLinkActive="active">Home</a>
-        <a routerLink="/gallery" routerLinkActive="active">Gallery</a>
-        <a routerLink="/history" routerLinkActive="active">History</a>
-        <a routerLink="/about" routerLinkActive="active">About</a>
-      </nav>
-    </mat-toolbar>
-    <div>
-    <router-outlet></router-outlet>
-  </div>
-
+<mat-toolbar id="navBar-Main">
+  <a routerLink="/home" routerLinkActive="active" id="navBar-Left">{{
+    title
+  }}</a>
+  <nav id="navBar-Right">
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/gallery" routerLinkActive="active">Gallery</a>
+    <a routerLink="/history" routerLinkActive="active">History</a>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+  </nav>
+</mat-toolbar>
+<div>
+  <router-outlet></router-outlet>
+</div>

@@ -12,6 +12,7 @@ import { GalleryComponent } from './Feature/Routings/gallery/gallery.component';
 import { HistoryComponent } from './Feature/Routings/history/history.component';
 import { HomeComponent } from './Feature/Routings/home/home.component';
 import { PageNotFoundComponent } from './Feature/_page-not-found/page-not-found.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PageNotFoundComponent } from './Feature/_page-not-found/page-not-found.
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
