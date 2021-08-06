@@ -1,3 +1,6 @@
+<div id="audioIcon">
+  <a (click)="togglePlay()"><fa-icon [icon]="faVolumeUp"></fa-icon></a>
+</div>
 <main class="routerArea">
   <h3>Site about the history of</h3>
   <h1>The Pink Panther</h1>
@@ -16,4 +19,9 @@
   <a href="https://en.wikipedia.org/wiki/The_Pink_Panther" target="_blank"
     ><fa-icon [icon]="faWikipediaW" class="brandIcon"></fa-icon
   ></a>
+  <br />
+  <audio controls #my_audio>
+    <source src="../../../../assets/HomePage.mp3" type="audio/mp3" />
+  </audio>
+  <br />
 </main>
