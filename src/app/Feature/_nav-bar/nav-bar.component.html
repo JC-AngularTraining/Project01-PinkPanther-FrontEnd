@@ -5,11 +5,15 @@
     </a>
   </nav>
   <nav id="navBar-Right">
-    <a routerLink="/home" routerLinkActive="active">Home</a>
-    <a routerLink="/gallery" routerLinkActive="active">Gallery</a>
-    <a routerLink="/history" routerLinkActive="active">History</a>
-    <a routerLink="/about" routerLinkActive="active">About</a>
-    <a href="#"><fa-icon [icon]="faUser"></fa-icon></a>
+    <a routerLink="/home" routerLinkActive="active" title="Home">Home</a>
+    <a routerLink="/gallery" routerLinkActive="active" title="Gallery"
+      >Gallery</a
+    >
+    <a routerLink="/history" routerLinkActive="active" title="History"
+      >History</a
+    >
+    <a routerLink="/about" routerLinkActive="active" title="About">About</a>
+    <a href="#" title="User"><fa-icon [icon]="faPaw" id="pawIcon"></fa-icon></a>
   </nav>
 </mat-toolbar>
 <div>

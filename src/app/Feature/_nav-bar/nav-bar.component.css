@@ -29,3 +29,7 @@ a {
 #navBar-Right a.active {
   color: #b61588;
 }
+
+#pawIcon {
+  font-size: 1.25em;
+}

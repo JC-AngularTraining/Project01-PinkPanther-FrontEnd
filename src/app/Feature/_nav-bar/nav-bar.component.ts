@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faPaw } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,7 +8,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 })
 export class NavBarComponent implements OnInit {
   title: string = 'The Pink Panther';
-  faUser  = faUser
+  faPaw  = faPaw
 
   constructor() { }
 
