@@ -9,7 +9,7 @@ a {
   justify-content: space-between;
 }
 
-#navBar-Left {
+#navBar-Left a {
   font-family: "cooper black";
   color: white;
   text-decoration: none;
@@ -22,7 +22,8 @@ a {
   padding: 0.5em;
 }
 
-#navBar-Right a:hover {
+#navBar-Right a:hover,
+#navBar-Left a:hover {
   color: #d372b7;
 }
 #navBar-Right a.active {

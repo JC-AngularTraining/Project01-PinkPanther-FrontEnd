@@ -1,15 +1,15 @@
-<!-- <h1 class="title"></h1>
-   -->
-
 <mat-toolbar id="navBar-Main">
-  <a routerLink="/home" routerLinkActive="active" id="navBar-Left">{{
-    title
-  }}</a>
+  <nav id="navBar-Left">
+    <a routerLink="/home" routerLinkActive="active">
+      {{ title }}
+    </a>
+  </nav>
   <nav id="navBar-Right">
     <a routerLink="/home" routerLinkActive="active">Home</a>
     <a routerLink="/gallery" routerLinkActive="active">Gallery</a>
     <a routerLink="/history" routerLinkActive="active">History</a>
     <a routerLink="/about" routerLinkActive="active">About</a>
+    <a href="#"><fa-icon [icon]="faUser"></fa-icon></a>
   </nav>
 </mat-toolbar>
 <div>
