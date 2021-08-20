@@ -17,7 +17,13 @@
     ><fa-icon [icon]="faWikipediaW" class="brandIcon"></fa-icon
   ></a>
   <br />
-  <audio controls #my_audio>
+  <!-- <span (click)="playSoundTrack()" class="audioIcon" -->
+  <span
+    (click)="playSoundTrack()"
+    [ngClass]="status ? 'audioIcon' : 'audioIconOff'"
+    ><fa-icon [icon]="faVolumeUp"></fa-icon
+  ></span>
+  <audio hidden>
     <source src="../../../../assets/HomePage.mp3" type="audio/mp3" />
   </audio>
   <br />

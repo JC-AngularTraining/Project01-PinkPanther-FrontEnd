@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { UtilsModule } from './Feature/__Utils/utils.module';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +14,7 @@ import { GalleryComponent } from './Feature/Routings/gallery/gallery.component';
 import { HistoryComponent } from './Feature/Routings/history/history.component';
 import { HomeComponent } from './Feature/Routings/home/home.component';
 import { PageNotFoundComponent } from './Feature/_page-not-found/page-not-found.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SignUpComponent } from './Feature/_users/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -23,16 +25,18 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HistoryComponent,
     AboutComponent,
     UsersComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SignUpComponent,
   ],
+  entryComponents: [UsersComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MatToolbarModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    UtilsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

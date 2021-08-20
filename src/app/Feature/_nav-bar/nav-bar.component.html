@@ -13,9 +13,9 @@
       >History</a
     >
     <a routerLink="/about" routerLinkActive="active" title="About">About</a>
-    <a href="#" title="User" id
-      ><fa-icon [icon]="faPaw" id="pawIcon"></fa-icon
-    ></a>
+    <i (click)="openUserModal()" title="User" class="userIcon">
+      <fa-icon [icon]="faPaw" id="pawIcon"></fa-icon>
+    </i>
   </nav>
 </mat-toolbar>
 <div>

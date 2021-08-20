@@ -34,18 +34,24 @@ h3 {
   color: #d372b7;
 }
 
-#audioIcon {
-  margin-top: 1em;
-  margin-right: 1em;
-  text-align: right;
-}
-
-#audioIcon fa-icon {
+.audioIcon {
+  position: absolute;
+  padding-top: 1em;
+  color: #b61588;
   font-size: 3em;
-  color: lightgray;
+  cursor: pointer;
 }
 
-#audioIcon fa-icon:hover {
-  color: #d372b7;
+.audioIconOff {
+  position: absolute;
+  padding-top: 1em;
+  color: grey;
+  opacity: 0.5;
+  font-size: 3em;
   cursor: pointer;
+}
+
+.audioIconOff:hover {
+  color: #b61588;
+  opacity: 1;
 }
