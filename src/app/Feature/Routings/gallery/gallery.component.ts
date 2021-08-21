@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import GallaryData from '../../../../assets/Gallery-data.json';
+import GallaryData from '../../../../assets/db-gallery.json';
 import { I_Gallery } from './Model/galleryModel';
 
 @Component({

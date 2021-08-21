@@ -15,6 +15,7 @@ import { HistoryComponent } from './Feature/Routings/history/history.component';
 import { HomeComponent } from './Feature/Routings/home/home.component';
 import { PageNotFoundComponent } from './Feature/_page-not-found/page-not-found.component';
 import { SignUpComponent } from './Feature/_users/sign-up/sign-up.component';
+import { AppendixComponent } from './Feature/Routings/appendix/appendix.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { SignUpComponent } from './Feature/_users/sign-up/sign-up.component';
     UsersComponent,
     PageNotFoundComponent,
     SignUpComponent,
+    AppendixComponent,
   ],
   entryComponents: [UsersComponent],
   imports: [

@@ -5,12 +5,14 @@ import { GalleryComponent } from './Feature/Routings/gallery/gallery.component';
 import { HistoryComponent } from './Feature/Routings/history/history.component';
 import { HomeComponent } from './Feature/Routings/home/home.component';
 import { PageNotFoundComponent } from './Feature/_page-not-found/page-not-found.component';
+import { AppendixComponent } from './Feature/Routings/appendix/appendix.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'history', component: HistoryComponent },
+  { path: 'appendix', component: AppendixComponent },
 
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
