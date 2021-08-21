@@ -16,6 +16,8 @@ import { HomeComponent } from './Feature/Routings/home/home.component';
 import { PageNotFoundComponent } from './Feature/_page-not-found/page-not-found.component';
 import { SignUpComponent } from './Feature/_users/sign-up/sign-up.component';
 import { AppendixComponent } from './Feature/Routings/appendix/appendix.component';
+import { Gallery1Component } from './Feature/Routings/gallery/gallery1/gallery1.component';
+import { Gallery2Component } from './Feature/Routings/gallery/gallery2/gallery2.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { AppendixComponent } from './Feature/Routings/appendix/appendix.componen
     PageNotFoundComponent,
     SignUpComponent,
     AppendixComponent,
+    Gallery1Component,
+    Gallery2Component,
   ],
   entryComponents: [UsersComponent],
   imports: [

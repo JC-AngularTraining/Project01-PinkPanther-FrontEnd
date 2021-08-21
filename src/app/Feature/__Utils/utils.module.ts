@@ -7,6 +7,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 const modules = [
   MatToolbarModule,
@@ -17,6 +20,9 @@ const modules = [
   FormsModule,
   ReactiveFormsModule,
   MatCardModule,
+  MatIconModule,
+  MatMenuModule,
+  IvyCarouselModule,
 ];
 
 @NgModule({

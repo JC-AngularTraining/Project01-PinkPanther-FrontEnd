@@ -1,9 +1,40 @@
-.routerArea {
-  text-align: center;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+a {
+  cursor: pointer;
+}
+
+#navBar-Main {
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  height: 5vh;
+  background: transparent;
+}
+
+#navBar-Left {
+  font-family: "cooper black";
+  color: #b61588;
+  font-size: 1.5em;
+  margin-left: 5em;
+}
+
+#navBar-Right {
+  margin-right: 10em;
+}
+
+#navBar-Right a {
+  text-decoration: none;
+  color: #b61588;
+  padding: 0.25em 0.5em;
+  border: 1px solid grey;
+  border-radius: 15px;
+  margin-right: 0.5em;
+}
+
+#navBar-Right a:hover {
+  color: #d372b7;
+  background-color: rgba(211, 211, 211, 0.473);
+}
+#navBar-Right a.active {
+  color: #b61588;
+  background-color: #fa8ab0;
 }

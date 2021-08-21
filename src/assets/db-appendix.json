@@ -120,5 +120,13 @@
     "Link": "https://dev.to/jwp/angular-material-table-ii-in-20-minutes-32gg",
     "Type": "Documentation",
     "Topic": "Angular"
+  },
+  {
+    "id": 17,
+    "Reference": "angular-responsive-carousel",
+    "Link": "https://www.npmjs.com/package/angular-responsive-carousel",
+    "Comments": "I have done an example of this in the gallary.  There is the creators website here too: http://ivylab.space/carousel#usage",
+    "Type": "Documentation",
+    "Topic": "Angular"
   }
 ]

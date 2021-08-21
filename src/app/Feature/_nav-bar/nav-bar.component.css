@@ -36,3 +36,30 @@ a {
   cursor: pointer;
   color: white;
 }
+
+#barsIcon {
+  font-size: 1.25em;
+  color: white;
+}
+
+.hamburgerMenu {
+  display: none;
+}
+
+.standardMenu {
+  display: inline;
+}
+
+@media screen and (max-width: 900px) {
+  .hamburgerMenu {
+    display: inline;
+  }
+
+  .standardMenu {
+    display: none;
+  }
+
+  #pawIcon {
+    margin-left: 0em;
+  }
+}

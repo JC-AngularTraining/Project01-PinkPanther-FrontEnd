@@ -1,3 +1,14 @@
-<main class="routerArea">
-  <h1>gallery works!</h1>
-</main>
+<mat-toolbar id="navBar-Main">
+  <nav id="navBar-Left">Gallery</nav>
+  <nav id="navBar-Right">
+    <a routerLink="gallery1" routerLinkActive="active" title="gallery1"
+      >gallery1</a
+    >
+    <a routerLink="gallery2" routerLinkActive="active" title="gallery2"
+      >gallery2</a
+    >
+  </nav>
+</mat-toolbar>
+<div>
+  <router-outlet></router-outlet>
+</div>
