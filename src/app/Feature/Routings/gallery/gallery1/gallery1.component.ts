@@ -28,21 +28,23 @@ export class Gallery1Component implements OnInit {
   ap = true;
 
   constructor(private galleryServiceService: GalleryServiceService) {
-    this.galleryServiceService.dataMessage$.subscribe(
-      (temp: I_Picture[] | I_Video[]) => {
-        this.dataSetNew = temp;
-        // console.log(this.dataSetNew);
-        // console.log(dataTest);
-        temp.forEach((d: I_Picture | I_Video) => {
-          console.log(d);
-          this.dataSet2.push({ path: d.url });
-          console.log(this.dataSet2);
-        });
-      }
-    );
+    // this.galleryServiceService.dataMessage$.subscribe(
+    //   (temp: I_Picture[] | I_Video[]) => {
+    //     this.dataSetNew = temp;
+    //     // console.log(this.dataSetNew);
+    //     // console.log(dataTest);
+    //     temp.forEach((d: I_Picture | I_Video) => {
+    //       console.log(d);
+    //       this.dataSet2.push({ path: d.url });
+    //       console.log(this.dataSet2);
+    //     });
+    //   }
+    // );
   }
 
   ngOnInit(): void {
-    console.log(this.dataSet2);
+    this.dataSet.forEach((d: I_Picture | I_Video) => {
+      this.dataSet2.push({ path: d.url });
+    });
   }
 }

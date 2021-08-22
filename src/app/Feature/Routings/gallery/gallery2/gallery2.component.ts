@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import GallaryData from '../../../../../assets/DB-Gallery_Pictures.json';
+import GallaryData from '../../../../../assets/DB_Gallery_Pictures.json';
 
 @Component({
   selector: 'app-gallery2',
@@ -9,7 +9,11 @@ import GallaryData from '../../../../../assets/DB-Gallery_Pictures.json';
 })
 export class Gallery2Component implements OnInit {
   title: string = `Bootstrap Carousel`;
-  constructor() {}
+  dataSet = GallaryData;
+
+  constructor() {
+    // console.log(GallaryData);
+  }
 
   ngOnInit(): void {}
 }
