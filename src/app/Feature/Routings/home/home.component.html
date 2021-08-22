@@ -1,7 +1,8 @@
 <main class="routerArea">
   <h3>Site about the history of</h3>
   <h1>The Pink Panther</h1>
-  <img src="assets/PP_MainImage.png" />
+  <img src="assets/PP_MainImage.png" id="imgLand" />
+  <img src="assets/PP_MainImage_Small.png" id="imgPort" />
   <a href="https://www.facebook.com/officialpinkpanther/" target="_blank"
     ><fa-icon [icon]="faFacebookF" class="brandIcon"></fa-icon
   ></a>
@@ -17,7 +18,6 @@
     ><fa-icon [icon]="faWikipediaW" class="brandIcon"></fa-icon
   ></a>
   <br />
-  <!-- <span (click)="playSoundTrack()" class="audioIcon" -->
   <span
     (click)="playSoundTrack()"
     [ngClass]="status ? 'audioIcon' : 'audioIconOff'"

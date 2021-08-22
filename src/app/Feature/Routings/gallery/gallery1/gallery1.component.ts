@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import GallaryData from '../../../../../assets/db-gallery.json';
+import GallaryData from '../../../../../assets/DB_Gallery_Pictures.json';
 import { I_Gallery } from '../_Model/galleryModel';
 
 @Component({
@@ -17,10 +17,11 @@ export class Gallery1Component implements OnInit {
   // cells = 5;
   ts = 1;
   cw = 200;
-  dot = true;
+  dot = false;
   objf = 'cover';
   cot = true;
   br = 10;
+  ap = true;
 
   constructor() {
     this.dataSet.forEach((d: any) => {

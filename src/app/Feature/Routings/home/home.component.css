@@ -55,3 +55,21 @@ h3 {
   color: #b61588;
   opacity: 1;
 }
+
+#imgLand {
+  display: block;
+}
+
+#imgPort {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  #imgLand {
+    display: none;
+  }
+
+  #imgPort {
+    display: block;
+  }
+}
