@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
@@ -9,9 +10,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { MatTabsModule } from '@angular/material/tabs';
 
 const modules = [
+  IvyCarouselModule,
   MatToolbarModule,
   MatDialogModule,
   MatButtonModule,
@@ -22,7 +24,7 @@ const modules = [
   MatCardModule,
   MatIconModule,
   MatMenuModule,
-  IvyCarouselModule,
+  MatTabsModule,
 ];
 
 @NgModule({

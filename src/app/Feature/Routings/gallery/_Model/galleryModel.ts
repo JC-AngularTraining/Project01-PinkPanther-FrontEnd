@@ -1,8 +1,18 @@
-export interface I_Gallery {
+export interface I_Picture {
   id: number;
-  Name: string;
+  title: string;
   url: string;
-  Source: 'FaceBook' | 'Twitter' | 'Google' | 'Other';
-  NoComments: number;
-  NoLikes: number;
+  source: 'FaceBook' | 'Twitter' | 'Google' | 'Other';
+  comments: number;
+  likes: number;
+}
+
+export interface I_Video {
+  id: number;
+  title: string;
+  url: string;
+  episode: number;
+  season: number;
+  likes: number;
+  Source: 'FaceBook' | 'Twitter' | 'YouTube' | 'Other';
 }

@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { GalleryServiceService } from '../_Services/gallery-service.service';
 
-import GallaryData from '../../../../../assets/DB_Gallery_Pictures.json';
-import { I_Gallery } from '../_Model/galleryModel';
+import GallaryPicture from '../../../../../assets/DB_Gallery_Pictures.json';
+
+import { I_Picture } from '../_Model/galleryModel';
+import { I_Video } from '../_Model/galleryModel';
 
 @Component({
   selector: 'app-gallery1',
@@ -10,7 +13,8 @@ import { I_Gallery } from '../_Model/galleryModel';
 })
 export class Gallery1Component implements OnInit {
   title: string = `angular-responsive-carousel`;
-  dataSet: I_Gallery[] = GallaryData;
+  dataSet = GallaryPicture;
+  dataSetNew!: I_Picture[] | I_Video[];
   dataSet2: any = [];
   valueH = 550;
   wd = 1000;
@@ -23,13 +27,22 @@ export class Gallery1Component implements OnInit {
   br = 10;
   ap = true;
 
-  constructor() {
-    this.dataSet.forEach((d: any) => {
-      // console.log(d);
-      this.dataSet2.push({ path: d.url });
-      // console.log(this.dataSet2);
-    });
+  constructor(private galleryServiceService: GalleryServiceService) {
+    this.galleryServiceService.dataMessage$.subscribe(
+      (temp: I_Picture[] | I_Video[]) => {
+        this.dataSetNew = temp;
+        // console.log(this.dataSetNew);
+        // console.log(dataTest);
+        temp.forEach((d: I_Picture | I_Video) => {
+          console.log(d);
+          this.dataSet2.push({ path: d.url });
+          console.log(this.dataSet2);
+        });
+      }
+    );
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.dataSet2);
+  }
 }

@@ -128,5 +128,21 @@
     "Comments": "I have done an example of this in the gallary.  There is the creators website here too: http://ivylab.space/carousel#usage",
     "Type": "Documentation",
     "Topic": "Angular"
+  },
+  {
+    "id": 18,
+    "Reference": "Angular Material Tabs with Routing",
+    "Link": "https://youtu.be/Zk-2CBKiMtU",
+    "Comments": "in this video you will see the syntax needed to do this as no longer on the site.",
+    "Type": "Video",
+    "Topic": "Angular"
+  },
+  {
+    "id": 19,
+    "Reference": "Nesting Routs inside parent routs with child routs",
+    "Link": "https://angular.io/guide/router#nesting-routes",
+    "Comments": "Use this if you are not using material tabs",
+    "Type": "Documentation",
+    "Topic": "Angular"
   }
 ]

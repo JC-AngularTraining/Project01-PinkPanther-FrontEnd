@@ -1,40 +1,40 @@
-a {
-  cursor: pointer;
-}
-
 #navBar-Main {
   border-bottom: 1px solid lightgrey;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 5vh;
   background: transparent;
 }
 
-#navBar-Left {
-  font-family: "cooper black";
-  color: #b61588;
+::ng-deep .mat-ink-bar {
+  background-color: #b61588 !important;
+}
+
+::ng-deep .mat-tab-label {
+  color: #fa8ab0 !important;
+  opacity: 1 !important;
+}
+
+::ng-deep .mat-tab-label:hover {
+  color: #d372b7 !important;
+}
+
+::ng-deep .mat-tab-label-active {
+  color: #b61588 !important;
+}
+
+.galleryIcon {
+  color: #fa8ab0;
   font-size: 1.5em;
-  margin-left: 5em;
+  margin-right: 4vw;
 }
 
-#navBar-Right {
-  margin-right: 10em;
-}
-
-#navBar-Right a {
-  text-decoration: none;
-  color: #b61588;
-  padding: 0.25em 0.5em;
-  border: 1px solid grey;
-  border-radius: 15px;
-  margin-right: 0.5em;
-}
-
-#navBar-Right a:hover {
+.galleryIcon:hover {
   color: #d372b7;
-  background-color: rgba(211, 211, 211, 0.473);
+  cursor: pointer;
 }
-#navBar-Right a.active {
+
+.activeItem {
   color: #b61588;
-  background-color: #fa8ab0;
 }

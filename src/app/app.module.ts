@@ -18,6 +18,7 @@ import { SignUpComponent } from './Feature/_users/sign-up/sign-up.component';
 import { AppendixComponent } from './Feature/Routings/appendix/appendix.component';
 import { Gallery1Component } from './Feature/Routings/gallery/gallery1/gallery1.component';
 import { Gallery2Component } from './Feature/Routings/gallery/gallery2/gallery2.component';
+import { GalleryServiceService } from './Feature/Routings/gallery/_Services/gallery-service.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import { Gallery2Component } from './Feature/Routings/gallery/gallery2/gallery2.
     FontAwesomeModule,
     UtilsModule,
   ],
-  providers: [],
+  providers: [GalleryServiceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

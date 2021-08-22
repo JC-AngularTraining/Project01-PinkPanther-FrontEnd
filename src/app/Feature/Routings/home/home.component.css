@@ -10,7 +10,7 @@
 }
 
 h1 {
-  font-size: 5em;
+  font-size: clamp(3rem, 8vw, 5rem);
   font-family: "cooper black";
   color: #fa8ab0;
   -webkit-text-stroke: 2.5px #b61588;
@@ -18,15 +18,19 @@ h1 {
 }
 
 h3 {
-  font-size: 3.5em;
+  font-size: clamp(1.5rem, 8vw, 3.5rem);
   font-weight: bold;
-  padding: 10px;
+  padding: 0.5em;
+}
+
+.brandContainer {
+  min-width: 400px;
 }
 
 .brandIcon {
   color: #b61588;
 
-  font-size: 4em;
+  font-size: clamp(2em, 8vw, 4em);
   padding: 0.5em;
 }
 
@@ -57,7 +61,7 @@ h3 {
 }
 
 #imgLand {
-  display: block;
+  display: inline;
 }
 
 #imgPort {
@@ -70,6 +74,6 @@ h3 {
   }
 
   #imgPort {
-    display: block;
+    display: inline;
   }
 }
