@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GalleryServiceService } from '../_Services/gallery-service.service';
 
-// import GallaryPicture from '../../../../../assets/DB_Gallery_Pictures.json';
+import GallaryPicture from '../../../../../assets/DB_Gallery_Pictures.json';
+import GallaryVideo from '../../../../../assets/DB_Gallery_Videos.json';
 
 import { I_Picture } from '../_Model/galleryModel';
 import { I_Video } from '../_Model/galleryModel';
@@ -27,12 +28,13 @@ export class Gallery1Component implements OnInit {
   ap = true;
 
   constructor(private galleryServiceService: GalleryServiceService) {
-    this.galleryServiceService.dataMessage$.subscribe(
-      (serviceData: I_Picture[] | I_Video[]) => {
-        // console.log(serviceData);
-        this.createURLList(serviceData);
-      }
-    );
+    // this.galleryServiceService.dataMessage$.subscribe(
+    //   (serviceData: I_Picture[] | I_Video[]) => {
+    //     // console.log(serviceData);
+    //     this.createURLList(serviceData);
+    //   }
+    // );
+    this.createURLList(GallaryPicture);
   }
 
   ngOnInit(): void {}
