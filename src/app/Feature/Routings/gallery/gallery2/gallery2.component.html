@@ -1,33 +1,27 @@
 <main class="routerArea">
   <h2>{{ title }}</h2>
-  <div
-    id="carouselExampleIndicators"
-    class="carousel slide"
-    data-bs-ride="carousel"
-  >
-    <!-- The setting of first and last is just example -->
-    <!-- prettier-ignore -->
-    <div class="carousel-inner">
-      <div *ngIf="setStateVideo">
-        <div class="carousel-item" [class.active]="isFirst" *ngFor="let dataV of dataSetV; first as isFirst; last as isLast">
-          <iframe [src]="dataV" width="700" height="600"></iframe>
-        </div>
-      </div>
+  <!-- prettier-ignore -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     
- 
-      <div *ngIf="setStatePicture">
-        <div class="carousel-item" [class.active]="isFirst" *ngFor="let dataP of dataSetP; first as isFirst; last as isLast">
-          <a href="https://www.google.com" target="_blank">
-            <img [src]="dataP.url" class="d-block w-100" [alt]="dataP.title" />
-            <div class="testClass">
-              <div class="carousel-caption">
-                <h3 style="font-size: 5em">Click For Info</h3>
-              </div>
-            </div>
-          </a>
-        </div>
+    <!-- The setting of first and last is just example -->
+    <div class="carousel-inner"> 
+      <div class="carousel-item" [class.active]="isFirst" *ngFor="let data of dataSet; first as isFirst; last as isLast">
+        <a href="https://www.google.com" target="_blank">
+          <div *ngIf="setState === 'Videos'">
+            <iframe [src]="data.url" width="700" height="600"></iframe>
+          </div>
+
+          <div *ngIf="setState === 'Pictures'">
+            <img [src]="data.url" class="d-block w-100" [alt]="data.title" />
+          </div>
+
+          <div class="carousel-caption">
+            <h3 style="font-size: 5em">Click For Info</h3>
+          </div>
+        </a>
       </div>
     </div>
+    
     <button
       class="carousel-control-prev"
       type="button"

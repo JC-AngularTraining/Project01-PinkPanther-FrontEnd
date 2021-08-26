@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { GalleryServiceService } from '../_Services/gallery-service.service';
 
-import GallaryPicture from '../../../../../assets/DB_Gallery_Pictures.json';
-import GallaryVideo from '../../../../../assets/DB_Gallery_Videos.json';
-
-import { I_Picture } from '../_Model/galleryModel';
+import { I_Picture, I_Video } from '../_Model/galleryModel';
 
 @Component({
   selector: 'app-gallery2',
@@ -14,45 +10,21 @@ import { I_Picture } from '../_Model/galleryModel';
 })
 export class Gallery2Component implements OnInit {
   title: string = `Bootstrap Carousel`;
-  setStateVideo: boolean = false;
-  setStatePicture: boolean = true;
-  dataSetV: SafeResourceUrl[] = [];
-  dataSetP: I_Picture[] = [];
-  videos: any[] = [];
+  setState: 'Pictures' | 'Videos' = 'Pictures';
+  // dataSet!: I_Picture[] | I_Video[];
+  dataSet: any[] = [];
 
-  constructor(
-    private galleryServiceService: GalleryServiceService,
-    private sanitizer: DomSanitizer
-  ) {
-    this.galleryServiceService.dataMessage$.subscribe(
-      (option: 'Pictures' | 'Videos') => {
-        // console.log(option);
-        if (option === 'Pictures') {
-          this.setStatePicture = true;
-          this.setStateVideo = false;
-          this.dataSetP = GallaryPicture;
-          // console.log(this.dataSetP);
-        } else {
-          this.setStateVideo = true;
-          this.setStatePicture = false;
-          GallaryVideo.forEach((a: any) => {
-            // console.log(a.url);
-            this.videos.push(a.url);
-            // console.log(this.videos);
-          });
+  constructor(private galleryServiceService: GalleryServiceService) {
+    this.galleryServiceService.stateMessage$.subscribe((state) => {
+      this.setState = state;
+      console.log('Gallery2-state', state);
+    });
 
-          this.newFunc(this.videos);
-          // console.log(this.dataSetV);
-        }
-      }
-    );
+    this.galleryServiceService.dataMessage$.subscribe((data) => {
+      this.dataSet = data;
+      console.log('Gallery2-data', data);
+    });
   }
 
   ngOnInit(): void {}
-
-  newFunc(a: any[]) {
-    this.dataSetV = a.map((video: any) =>
-      this.sanitizer.bypassSecurityTrustResourceUrl(video)
-    );
-  }
 }

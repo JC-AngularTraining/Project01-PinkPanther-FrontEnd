@@ -22,10 +22,10 @@ img {
   border-radius: 15px;
 }
 
-.testClass {
+.carousel-caption {
   display: none;
 }
 
-img:hover + .testClass {
+img:hover + .carousel-caption {
   display: block;
 }

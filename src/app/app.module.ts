@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { UtilsModule } from './Feature/__Utils/utils.module';
@@ -42,6 +43,7 @@ import { GalleryServiceService } from './Feature/Routings/gallery/_Services/gall
     AppRoutingModule,
     FontAwesomeModule,
     UtilsModule,
+    HttpClientModule,
   ],
   providers: [GalleryServiceService],
   bootstrap: [AppComponent],
