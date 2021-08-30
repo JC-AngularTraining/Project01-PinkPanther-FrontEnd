@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import Tabulator from 'tabulator-tables';
 
-import AppendixData from '../../../../assets/db-appendix.json';
+// import AppendixData from '../../../../assets/db-appendix.json';
+import { AllHTTPsService } from '../../__Services/all-https.service';
 import { I_Appendix, Columns } from './model/appendix';
 
 @Component({
@@ -14,15 +15,27 @@ export class AppendixComponent implements OnInit {
   title: string = `Appendix - Created with Tabulator`;
   tab: HTMLElement = document.createElement('div');
   innerGrid!: Tabulator;
-  appendixData: I_Appendix[] = AppendixData;
+  // appendixData: I_Appendix[] = AppendixData;
+  appendixData!: I_Appendix[];
 
-  constructor() {}
+  constructor(private allHTTPsService: AllHTTPsService) {
+    this.allHTTPsService.getAppendixs().subscribe((response) => {
+      // console.log(response.data);
+      this.appendixData = response.data;
+      // console.log(this.appendixData);
+    });
+  }
 
   ngOnInit(): void {
+    // this.getAppendixsData();
     this.drawTable();
   }
 
+  getAppendixsData() {}
+
   drawTable(): void {
+    // this.getAppendixsData();
+    // console.log(this.appendixData);
     let parentDiv = document.getElementById('inner-table');
     let tabConfig: Tabulator.Options = {
       data: this.appendixData,
