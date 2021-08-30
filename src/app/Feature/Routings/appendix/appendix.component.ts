@@ -16,40 +16,30 @@ export class AppendixComponent implements OnInit {
   tab: HTMLElement = document.createElement('div');
   innerGrid!: Tabulator;
   // appendixData: I_Appendix[] = AppendixData;
-  appendixData!: I_Appendix[];
 
-  constructor(private allHTTPsService: AllHTTPsService) {
-    this.allHTTPsService.getAppendixs().subscribe((response) => {
-      // console.log(response.data);
-      this.appendixData = response.data;
-      // console.log(this.appendixData);
-    });
-  }
+  constructor(private allHTTPsService: AllHTTPsService) {}
 
   ngOnInit(): void {
-    // this.getAppendixsData();
     this.drawTable();
   }
 
-  getAppendixsData() {}
-
   drawTable(): void {
-    // this.getAppendixsData();
-    // console.log(this.appendixData);
-    let parentDiv = document.getElementById('inner-table');
-    let tabConfig: Tabulator.Options = {
-      data: this.appendixData,
-      height: '100%',
-      layout: 'fitColumns',
-      columns: Columns,
-      resizableRows: true,
-      movableColumns: true,
-      clipboard: true,
-      clipboardPasteAction: 'replace',
-    };
-    this.innerGrid = new Tabulator(this.tab, tabConfig);
-    this.tab.classList.add('table-light');
-    parentDiv!.appendChild(this.tab);
-    this.innerGrid.redraw(true);
+    this.allHTTPsService.getAppendixs().subscribe((response) => {
+      let parentDiv = document.getElementById('inner-table');
+      let tabConfig: Tabulator.Options = {
+        data: response.data,
+        height: '100%',
+        layout: 'fitColumns',
+        columns: Columns,
+        resizableRows: true,
+        movableColumns: true,
+        clipboard: true,
+        clipboardPasteAction: 'replace',
+      };
+      this.innerGrid = new Tabulator(this.tab, tabConfig);
+      this.tab.classList.add('table-light');
+      parentDiv!.appendChild(this.tab);
+      this.innerGrid.redraw(true);
+    });
   }
 }
