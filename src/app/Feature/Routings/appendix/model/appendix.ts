@@ -12,11 +12,6 @@ export interface I_Appendix {
 // Table Column Structure
 export const Columns: Tabulator.ColumnDefinition[] = [
   {
-    title: 'ID',
-    field: 'id',
-    sorter: 'number',
-  },
-  {
     title: 'Reference',
     field: 'Link',
     sorter: 'string',

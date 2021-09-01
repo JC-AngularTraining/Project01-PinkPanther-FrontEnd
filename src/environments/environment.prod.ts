@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  apiUrl: 'https://jc-development-api.herokuapp.com',
+  // apiUrl: 'http://localhost:3000',
+  production: true,
 };
