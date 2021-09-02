@@ -14,4 +14,12 @@ export class AllHTTPsService {
   getAppendixs(): Observable<any> {
     return this.http.get(this.apiUrl + '/appendix');
   }
+
+  getPictures(): Observable<any> {
+    return this.http.get(this.apiUrl + '/picture');
+  }
+
+  getVideos(): Observable<any> {
+    return this.http.get(this.apiUrl + '/video');
+  }
 }
